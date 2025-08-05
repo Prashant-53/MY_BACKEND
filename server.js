@@ -1,14 +1,16 @@
-const cors = require('cors');
-app.use(cors({
-    origin: 'https://my-portfolio-nu-five-42.vercel.app' // allow only your Vercel frontend
-}));
 
 
 const express = require('express');
+const cors = require('cors')
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
 const path = require('path');
 const app = express();
+
+
+app.use(cors({
+    origin: 'https://my-portfolio-nu-five-42.vercel.app' // allow only your Vercel frontend
+}));
 
 dotenv.config();
 app.use(express.static('public'));
