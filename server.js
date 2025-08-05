@@ -1,9 +1,8 @@
-function toggleMenu() {
-    const menu = document.querySelector(".Menu-Links");
-    const icon = document.querySelector(".hamburger-icon");
-    menu.classList.toggle("open")
-    icon.classList.toggle("open")
-}
+const cors = require('cors');
+app.use(cors({
+    origin: 'https://my-portfolio-nu-five-42.vercel.app' // allow only your Vercel frontend
+}));
+
 
 const express = require('express');
 const nodemailer = require('nodemailer');
